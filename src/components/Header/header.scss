@@ -1,0 +1,8 @@
+.header {
+  background-color: transparentize(grey, 0.7);
+
+  &__current-page-info {
+    padding: 20px 0;
+    text-align: center;
+  }
+}

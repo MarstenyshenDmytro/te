@@ -1,0 +1,17 @@
+.first-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__button {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: transparentize(grey, 0.8);
+
+    &:hover {
+      cursor: pointer;
+      background-color: transparent;
+    }
+  }
+}

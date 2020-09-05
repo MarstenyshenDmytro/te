@@ -1,0 +1,10 @@
+.dashboard {
+  display: grid;
+  grid-template-rows: auto 100vh auto;
+
+  &__main-content {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding-top: 30px;
+  }
+}

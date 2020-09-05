@@ -1,0 +1,22 @@
+.list-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 10px 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__id {
+    flex: 1;
+  }
+
+  &__text {
+    flex: 10;
+  }
+  &_selected-in-table {
+    background-color: transparentize(green, 0.5);
+  }
+}

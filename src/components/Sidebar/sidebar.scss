@@ -1,0 +1,16 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &__item {
+    max-width: 150px;
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px solid black;
+
+    &-active {
+      background-color: transparentize(grey, 0.8);
+    }
+  }
+}

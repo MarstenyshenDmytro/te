@@ -1,0 +1,95 @@
+.modal-window {
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    width: 500px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  &__header {
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    margin-bottom: 20px;
+  }
+
+  &__checkbox {
+    min-width: 27px;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    margin-bottom: 5px;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: transparentize(grey, 0.8);
+    }
+
+    &-active {
+      background-color: transparentize(grey, 0.8);
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    &_selected-in-table {
+      color: green;
+      border: 2px solid green;
+    }
+  }
+
+  &__items {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  &__buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
+
+  &__button {
+    padding: 10px 20px;
+    transition: 0.3s;
+
+    &:hover {
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    &_ok {
+      color: white;
+      border-radius: 4px;
+      background-color: blue;
+
+      &:hover {
+        background-color: transparentize(blue, 0.5);
+      }
+    }
+
+    &_cancel {
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
