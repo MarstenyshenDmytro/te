@@ -1,6 +1,32 @@
 .header {
   background-color: transparentize(grey, 0.7);
 
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+
+  &__user {
+    display: flex;
+    margin: 5px 0;
+  }
+
+  &__avatar {
+    max-width: 50px;
+    height: 50px;
+  }
+
+  &__logout-button-wrapper {
+    margin-left: 5px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__logout-button {
+    padding: 0;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__current-page-info {
     padding: 20px 0;
     text-align: center;

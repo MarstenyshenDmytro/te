@@ -1,0 +1,22 @@
+.field {
+  margin: 10px 0;
+
+  &__name {
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    border: 1px solid black;
+    padding: 10px;
+
+    &_error {
+      border-color: #bf102b;
+    }
+  }
+
+  &__error-text {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #bf102b;
+  }
+}

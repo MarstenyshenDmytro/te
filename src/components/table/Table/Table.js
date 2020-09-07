@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useContext, useRef } from "react";
+import React, {
+  useState,
+  useEffect,
+  useContext,
+  useRef,
+  useCallback,
+} from "react";
 
 import ContextApp from "../../../context";
 
@@ -35,19 +41,19 @@ const Table = () => {
     }
   };
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const {
       current: { scrollHeight, clientHeight, scrollTop },
     } = ref;
 
     if (clientHeight + scrollTop + 200 > scrollHeight) {
       const newItems = [];
-      itemsToRender.forEach((item, i) =>
+      [...Array(50)].forEach((item, i) =>
         newItems.push(list[i + itemsToRender.length])
       );
       updateItemsToRender([...itemsToRender, ...newItems]);
     }
-  };
+  }, [itemsToRender, list]);
 
   useEffect(() => {
     ref.current.addEventListener("scroll", handleScroll);
@@ -55,7 +61,7 @@ const Table = () => {
     return () => {
       ref.current.removeEventListener("scroll", () => handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   return (
     <div className="table__wrapper" ref={ref}>

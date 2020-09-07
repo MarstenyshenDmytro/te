@@ -1,0 +1,31 @@
+.sign-in {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__header {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    border: 1px solid black;
+    padding: 15px 25px;
+  }
+
+  &__failed-message {
+    color: #bf102b;
+    margin-bottom: 10px;
+  }
+
+  &__button {
+    border: 1px solid black;
+    background-color: transparentize(grey, 0.5);
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

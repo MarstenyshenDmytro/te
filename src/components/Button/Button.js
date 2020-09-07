@@ -1,7 +1,13 @@
 import React from "react";
 
-const Button = ({ className, label, onClick }) => (
-  <button className={className} onClick={onClick}>
+import "./button.scss";
+
+const Button = ({ className, label, onClick, type }) => (
+  <button
+    className={`button ${className}`}
+    onClick={onClick ? onClick : () => {}}
+    type={type || "button"}
+  >
     {label}
   </button>
 );
